@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "PEC Chatbot Extension",
+    "version": "1.0",
+    "description": "Injects a React-based chatbot into the PEC website",
+    "host_permissions": ["*://pec.ac.in/*"],
+    "content_scripts": [
+      {
+        "matches": ["*://pec.ac.in/*"],
+        "js": ["inject.js"]
+      }
+    ],
+    "web_accessible_resources": [
+      {
+        "resources": [
+          "build/asset-manifest.json", 
+          "build/static/js/*.js",     
+          "build/static/css/*.css",   
+          "build/static/media/*"
+        ],
+        "matches": ["*://pec.ac.in/*"]
+      }
+    ]
+  }
+  
+  
